@@ -38,7 +38,19 @@ describe('Staff', () => {
          
     })
 
-    it('E03-A-Priori Invitar a un usuario', function() { 
+    it('E03-A-Priori Modificar  user-facebook  del perfil', function() { 
+        cy.visit(Cypress.env('baseUrl')+'ghost/#/staff/ghost');
+        cy.get('#user-facebook').clear({force: true});
+        cy.get('#user-facebook').type(data[8].JuserF, {force:true});
+        cy.get('section.view-actions > button').click({ force: true })
+        cy.get('section.view-actions > button')
+            .should('have.class', 'gh-btn-blue');        
+         
+    })
+
+    
+
+    it('E04-A-Priori Invitar a un usuario', function() { 
         cy.visit(Cypress.env('baseUrl')+'ghost/#/staff');
         cy.get("button.gh-btn.gh-btn-green").click();
         cy.get('#new-user-email').clear({force: true});
@@ -47,7 +59,7 @@ describe('Staff', () => {
        
     })
 
-    it('E04-A-Priori Modificar datos generales metadatos', function() { 
+    it('E05-A-Priori Modificar datos generales metadatos', function() { 
         cy.visit(Cypress.env('baseUrl')+'ghost/#/settings/general/');
         cy.get(".gh-setting-first > .flex > .gh-setting-action > .gh-btn > span").click({force:true}); 
         cy.get('#metaDescription').clear({force: true});
@@ -58,7 +70,7 @@ describe('Staff', () => {
       
     })
 
-    it('E05-A-Priori Modificar datos generales Titulo facebook', function() { 
+    it('E06-A-Priori Modificar datos generales Titulo facebook', function() { 
         cy.visit(Cypress.env('baseUrl')+'ghost/#/settings/general/');
         cy.get(".gh-setting-last > .flex > .gh-setting-action > .gh-btn > span").click({force:true}); 
         cy.get('#ogTitle').clear({force: true});
@@ -69,7 +81,7 @@ describe('Staff', () => {
     
     })
 
-    it('E06-A-Priori Modificar datos generales Descripción facebook', function() { 
+    it('E07-A-Priori Modificar datos generales Descripción facebook', function() { 
         cy.visit(Cypress.env('baseUrl')+'ghost/#/settings/general/');
         cy.get(".gh-setting-last > .flex > .gh-setting-action > .gh-btn > span").click({force:true}); 
         cy.get('#ogDescription').clear({force: true});
@@ -80,7 +92,7 @@ describe('Staff', () => {
     
     })
 
-    it('E07-A-Priori Modificar datos generales Titulo twitter', function() { 
+    it('E08-A-Priori Modificar datos generales Titulo twitter', function() { 
         cy.visit(Cypress.env('baseUrl')+'ghost/#/settings/general/');
         cy.get(".gh-setting > .flex > .gh-setting-action > .gh-btn > span").click({force:true}); 
         cy.get('#twitterTitle').clear({force: true});
@@ -91,7 +103,7 @@ describe('Staff', () => {
 
     })
 
-    it('E08-A-Priori Modificar datos generales Descripción twitter', function() { 
+    it('E09-A-Priori Modificar datos generales Descripción twitter', function() { 
         cy.visit(Cypress.env('baseUrl')+'ghost/#/settings/general/');
         cy.get(".gh-setting > .flex > .gh-setting-action > .gh-btn > span").click({force:true}); 
         cy.get('#twitterDescription').clear({force: true});
@@ -105,7 +117,7 @@ describe('Staff', () => {
 
 // Escenarios Pseudo
 
-    it('E01-Pseudo Modificar datos del perfil', function() { 
+    it('E01-Pseudo Modificar locación del perfil', function() { 
 
         cy.visit(Cypress.env('baseUrl')+'ghost/#/staff/ghost');
         cy.get('#user-location').clear({force: true});
@@ -116,7 +128,7 @@ describe('Staff', () => {
      
     })
 
-    it('E02-Pseudo Modificar datos del perfil', function() { 
+    it('E02-Pseudo Modificar website del perfil', function() { 
 
         cy.visit(Cypress.env('baseUrl')+'ghost/#/staff/ghost');
         cy.get('#user-website').clear({force: true});
@@ -127,7 +139,17 @@ describe('Staff', () => {
          
     })
 
-    it('E03-Pseudo Invitar a un usuario', function() { 
+    it('E03-Pseudo Modificar  user-facebook  del perfil', function() { 
+        cy.visit(Cypress.env('baseUrl')+'ghost/#/staff/ghost');
+        cy.get('#user-facebook').clear({force: true});
+        cy.get('#user-facebook').type(dato[8].JuserF, {force:true});
+        cy.get('section.view-actions > button').click({ force: true })
+        cy.get('section.view-actions > button')
+            .should('have.class', 'gh-btn-blue');        
+         
+    })
+
+    it('E04-Pseudo Invitar a un usuario', function() { 
 
         cy.visit(Cypress.env('baseUrl')+'ghost/#/staff');
         cy.get("button.gh-btn.gh-btn-green").click();
@@ -137,7 +159,7 @@ describe('Staff', () => {
            
     })
 
-    it('E04-Pseudo Modificar datos generales metadatos', function() { 
+    it('E05-Pseudo Modificar datos generales metadatos', function() { 
         cy.visit(Cypress.env('baseUrl')+'ghost/#/settings/general/');
         cy.get(".gh-setting-first > .flex > .gh-setting-action > .gh-btn > span").click({force:true}); 
         cy.get('#metaDescription').clear({force: true});
@@ -148,7 +170,7 @@ describe('Staff', () => {
 
     })
 
-    it('E05-Pseudo Modificar datos generales Titulo facebook', function() { 
+    it('E06-Pseudo Modificar datos generales Titulo facebook', function() { 
         cy.visit(Cypress.env('baseUrl')+'ghost/#/settings/general/');
         cy.get(".gh-setting-last > .flex > .gh-setting-action > .gh-btn > span").click({force:true}); 
         cy.get('#ogTitle').clear({force: true});
@@ -159,7 +181,7 @@ describe('Staff', () => {
         
     })
 
-    it('E06-Pseudo Modificar datos generales Descripción facebook', function() { 
+    it('E07-Pseudo Modificar datos generales Descripción facebook', function() { 
         cy.visit(Cypress.env('baseUrl')+'ghost/#/settings/general/');
         cy.get(".gh-setting-last > .flex > .gh-setting-action > .gh-btn > span").click({force:true}); 
         cy.get('#ogDescription').clear({force: true});
@@ -170,7 +192,7 @@ describe('Staff', () => {
         
     })
 
-    it('E07-Pseudo Modificar datos generales Titulo twitter', function() { 
+    it('E08-Pseudo Modificar datos generales Titulo twitter', function() { 
         cy.visit(Cypress.env('baseUrl')+'ghost/#/settings/general/');
         cy.get(".gh-setting > .flex > .gh-setting-action > .gh-btn > span").click({force:true}); 
         cy.get('#twitterTitle').clear({force: true});
@@ -181,7 +203,7 @@ describe('Staff', () => {
     
     })
 
-    it('E08-Pseudo Modificar datos generales Descripción twitter', function() { 
+    it('E09-Pseudo Modificar datos generales Descripción twitter', function() { 
         cy.visit(Cypress.env('baseUrl')+'ghost/#/settings/general/');
         cy.get(".gh-setting > .flex > .gh-setting-action > .gh-btn > span").click({force:true}); 
         cy.get('#twitterDescription').clear({force: true});
@@ -194,7 +216,7 @@ describe('Staff', () => {
 
 // Escenarios Faker
 
-    it('E01-Faker Modificar datos del perfil', function() { 
+    it('E01-Faker Modificar locación del perfil', function() { 
         cy.visit(Cypress.env('baseUrl')+'ghost/#/staff/ghost');
         cy.get('#user-location').clear({force: true});
         cy.get('#user-location').type(faker.address.city());
@@ -204,7 +226,7 @@ describe('Staff', () => {
      
     })
 
-    it('E02-Faker Modificar datos del perfil', function() { 
+    it('E02-Faker Modificar website del perfil', function() { 
         cy.visit(Cypress.env('baseUrl')+'ghost/#/staff/ghost');
         cy.get('#user-website').clear({force: true});
         cy.get('#user-website').type(faker.internet.domainName());
@@ -214,7 +236,17 @@ describe('Staff', () => {
          
     })
 
-    it('E03-Faker Invitar a un usuario', function() { 
+    it('E03-Faker Modificar user-facebook del perfil', function() { 
+        cy.visit(Cypress.env('baseUrl')+'ghost/#/staff/ghost');
+        cy.get('#user-facebook').clear({force: true});
+        cy.get('#user-facebook').type(faker.internet.domainName());
+        cy.get('section.view-actions > button').click({ force: true })
+        cy.get('section.view-actions > button')
+            .should('have.class', 'gh-btn-blue');           
+         
+    })
+
+    it('E04-Faker Invitar a un usuario', function() { 
         cy.visit(Cypress.env('baseUrl')+'ghost/#/staff');
         cy.get("button.gh-btn.gh-btn-green").click();
         cy.get('#new-user-email').clear({force: true});
@@ -225,7 +257,7 @@ describe('Staff', () => {
 
     
 
-    it('E04-Faker Modificar datos generales metadatos', function() { 
+    it('E05-Faker Modificar datos generales metadatos', function() { 
         cy.visit(Cypress.env('baseUrl')+'ghost/#/settings/general/');
         cy.get(".gh-setting-first > .flex > .gh-setting-action > .gh-btn > span").click({force:true}); 
         cy.get('#metaDescription').clear({force: true});
@@ -236,7 +268,7 @@ describe('Staff', () => {
       
     })
 
-    it('E05-Faker Modificar datos generales Titulo facebook', function() { 
+    it('E06-Faker Modificar datos generales Titulo facebook', function() { 
         cy.visit(Cypress.env('baseUrl')+'ghost/#/settings/general/');
         cy.get(".gh-setting-last > .flex > .gh-setting-action > .gh-btn > span").click({force:true}); 
         cy.get('#ogTitle').clear({force: true});
@@ -247,7 +279,7 @@ describe('Staff', () => {
     
     })
 
-    it('E06-Faker Modificar datos generales Descripción facebook', function() { 
+    it('E07-Faker Modificar datos generales Descripción facebook', function() { 
         cy.visit(Cypress.env('baseUrl')+'ghost/#/settings/general/');
         cy.get(".gh-setting-last > .flex > .gh-setting-action > .gh-btn > span").click({force:true}); 
         cy.get('#ogDescription').clear({force: true});
@@ -258,7 +290,7 @@ describe('Staff', () => {
     
     })
 
-    it('E07-Faker Modificar datos generales Titulo twitter', function() { 
+    it('E08-Faker Modificar datos generales Titulo twitter', function() { 
         cy.visit(Cypress.env('baseUrl')+'ghost/#/settings/general/');
         cy.get(".gh-setting > .flex > .gh-setting-action > .gh-btn > span").click({force:true}); 
         cy.get('#twitterTitle').clear({force: true});
@@ -270,7 +302,7 @@ describe('Staff', () => {
     })
 
 
-    it('E08-Faker Modificar datos generales Descripción twitter', function() { 
+    it('E09-Faker Modificar datos generales Descripción twitter', function() { 
         cy.visit(Cypress.env('baseUrl')+'ghost/#/settings/general/');
         cy.get(".gh-setting > .flex > .gh-setting-action > .gh-btn > span").click({force:true}); 
         cy.get('#twitterDescription').clear({force: true});
