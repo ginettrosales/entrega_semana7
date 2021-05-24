@@ -43,4 +43,4 @@ En una terminal ubíquese en el directorio entrega_semana7 y abra el archivo cyp
 # Ejecución de las pruebas E2E
 En una terminal ubíquese en el directorio entrega_semana7 y ejecute el siguiente comando para probar todos los escenarios:
 
-./node_modules/.bin/cypress run -C cypress.json
+`./node_modules/.bin/cypress run -C cypress.json` o `cypress open` y ejecute la suite de prueba
