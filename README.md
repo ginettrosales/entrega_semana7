@@ -29,10 +29,6 @@ Crear una cuenta de usuario en Ghost (Incluído en el tutorial del anterior punt
 
 Instalar librerías
 Clone el repositorio de pruebas utilizando uno de los siguientes comandos:
-git clone git@github.com:jpfeliciano/pruebas-e2e-ghost.git
-
-ó
-
 git clone https://github.com/ginettrosales/entrega_semana7.git
 
 Ahora navegue hasta el subdirectorio entrega_semana7 con el siguiente comando:
