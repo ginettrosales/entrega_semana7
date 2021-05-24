@@ -36,6 +36,7 @@ export class GhostPost {
             .then(val => {
                 const postTitle = val
             })
+        cy.get('button.post-settings').click()
     }
 
     selectLastedPost() {
@@ -64,5 +65,9 @@ export class GhostPost {
         cy.get('div.gh-publishmenu-radio').first()
             .should('have.class', 'active')
         cy.get('footer.gh-publishmenu-footer button.gh-publishmenu-button').click()
+    }
+
+    addMetadata() {
+        cy.get('div.settings-menu-content ul li.nav-list-item').first().click()
     }
 }
