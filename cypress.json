@@ -1,5 +1,5 @@
 {
-    "baseUrl": "http://localhost:2369/",
+    "baseUrl": "http://localhost:2368/",
     "defaultCommandTimeout": 10000,
     "viewportWidth": 1920,
     "viewportHeight": 1080,
@@ -8,7 +8,7 @@
     "screenshotOnRunFailure": true,
     "trashAssetsBeforeRuns": true,
     "env" : {
-        "email" : "g.rosales@uniandes.edu.co",
-        "pass": "misociclo2"
+        "email":"id.amarillo224@uniandes.edu.co",
+        "pass":"rock1020736329fantasma"
     }
 }
