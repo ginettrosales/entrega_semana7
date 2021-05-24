@@ -52,13 +52,12 @@ describe('A-Priori - Crear Pages TestCase', () => {
         ghostPage.publicarPage(data_a_priori.crear_post_1.titulo)
         cy.url().should('contain', '#/pages')
     })
-/*
+
     it('E07 - Crear nuevo page sin titulo', () => {
         cy.url().should('contain', '#/pages')
         ghostPage.crearNuevoPage(data_a_priori.crear_post_3.titulo)
         cy.url().should('contain', '#/pages')
     })
-*/
 })
 
 describe('Pseudo Aleatorias - Crear Tags TestCase', () => {
@@ -110,119 +109,119 @@ describe('Aleatorias General Pages TestCase', () => {
     })
 
     //Pruebas aleatorias
-    it('E10 - Crear Page con titulo aleatorio', () => {
+    it('E12 - Crear Page con titulo aleatorio', () => {
         cy.url().should('contain', '#/pages')
         ghostPage.crearNuevoPage(faker.name.firstName())
         cy.url().should('contain', '#/pages')
     })
 
-    it('E11 - Crear Page con una sola letra aleatoria', () => {
+    it('E13 - Crear Page con una sola letra aleatoria', () => {
         cy.url().should('contain', '#/pages')
         ghostPage.crearNuevoPage(faker.random.alpha())
         cy.url().should('contain', '#/pages')
     })
 
-    it('E12 - Crear Page con un solo numero aleatorio', () => {
+    it('E14 - Crear Page con un solo numero aleatorio', () => {
         cy.url().should('contain', '#/pages')
         ghostPage.crearNuevoPage(faker.random.number(9))
         cy.url().should('contain', '#/pages')
     })
 
-    it('E13 - Crear Page con dos numeros aleatorios', () => {
+    it('E15 - Crear Page con dos numeros aleatorios', () => {
         cy.url().should('contain', '#/pages')
         ghostPage.crearNuevoPage(faker.random.number(99))
         cy.url().should('contain', '#/pages')
     })
 
-    it('E14 - Crear Page con una serie aleatoria de numeros', () => {
+    it('E16 - Crear Page con una serie aleatoria de numeros', () => {
         cy.url().should('contain', '#/pages')
         ghostPage.crearNuevoPage(faker.time.recent().toString() + faker.time.recent().toString() + faker.time.recent().toString())
         cy.url().should('contain', '#/pages')
     })
     
-    it('E15 - Crear Page con direcciones aleatorias', () => {
+    it('E17 - Crear Page con direcciones aleatorias', () => {
         cy.url().should('contain', '#/pages')
         ghostPage.crearNuevoPage(faker.name.prefix() + faker.address.zipCode() + faker.address.zipCode() + faker.address.zipCode() + faker.address.zipCode() + faker.address.zipCode())
         cy.url().should('contain', '#/pages')
     })
 
-    it('E16 - Crear Page con titulo largo aleatorio', () => {
+    it('E18 - Crear Page con titulo largo aleatorio', () => {
         cy.url().should('contain', '#/pages')
         ghostPage.crearNuevoPage(faker.lorem.words(10))
         cy.url().should('contain', '#/pages')
     })
 
-    it('E17 - Crear tag con palabra aleatoria', () => {
+    it('E19 - Crear tag con palabra aleatoria', () => {
         ghostPage.crearNuevoPage(faker.lorem.word())
         ghostPage.insertarTag(faker.lorem.word(), faker.lorem.word())
     })
 
-    it('E18 - Crear tag con letra aleatoria', () => {
+    it('E20 - Crear tag con letra aleatoria', () => {
         ghostPage.crearNuevoPage(faker.lorem.word())
         ghostPage.insertarTag(faker.random.alpha(), faker.random.alpha())
     })
 
-    it('E19 - Crear tag con numero aleatorio', () => {
+    it('E21 - Crear tag con numero aleatorio', () => {
         ghostPage.crearNuevoPage(faker.lorem.word())
         ghostPage.insertarTag(faker.random.number(9), faker.random.number(9))
     })
 
-    it('E20 - Crear tag con numeros aleatorios', () => {
+    it('E22 - Crear tag con numeros aleatorios', () => {
         ghostPage.crearNuevoPage(faker.lorem.word())
         ghostPage.insertarTag(faker.address.zipCode(), faker.address.zipCode())
     })
 
-    it('E21 - Crear tag con una serie aleatoria de numeros', () => {
+    it('E23 - Crear tag con una serie aleatoria de numeros', () => {
         ghostPage.crearNuevoPage(faker.lorem.word())
         ghostPage.insertarTag(faker.time.recent().toString() + faker.time.recent().toString() + faker.time.recent().toString())
     })
 
-    it('E22 - Editar URL con una palabra aleatoria', () => {
+    it('E24 - Editar URL con una palabra aleatoria', () => {
         ghostPage.crearNuevoPage(faker.lorem.word())
         ghostPage.editarUrl(faker.random.word(), faker.random.word())
     })
 
-    it('E23 - Editar URL con letra aleatoria', () => {
+    it('E25 - Editar URL con letra aleatoria', () => {
         ghostPage.crearNuevoPage(faker.lorem.word())
         ghostPage.editarUrl(faker.random.alpha(), faker.random.alpha())
     })
 
-    it('E24 - Editar URL con numero aleatorio', () => {
+    it('E26 - Editar URL con numero aleatorio', () => {
         ghostPage.crearNuevoPage(faker.lorem.word())
         ghostPage.editarUrl(faker.random.number(9), faker.random.number(9))
     })
 
-    it('E25 - Editar URL con numeros aleatorios', () => {
+    it('E27 - Editar URL con numeros aleatorios', () => {
         ghostPage.crearNuevoPage(faker.lorem.word())
         ghostPage.editarUrl(faker.address.zipCode(), faker.address.zipCode())
     })
 
-    it('E26 - Editar URL con una serie aleatoria de numeros', () => {
+    it('E28 - Editar URL con una serie aleatoria de numeros', () => {
         ghostPage.crearNuevoPage(faker.lorem.word())
         ghostPage.editarUrl(faker.time.recent().toString() + faker.time.recent().toString() + faker.time.recent().toString())
     })
 
-    it('E22 - Editar Excerpt con una palabra aleatoria', () => {
+    it('E29 - Editar Excerpt con una palabra aleatoria', () => {
         ghostPage.crearNuevoPage(faker.lorem.word())
         ghostPage.editarExcerpt(faker.random.word(), faker.random.word())
     })
 
-    it('E23 - Editar Excerpt con letra aleatoria', () => {
+    it('E30 - Editar Excerpt con letra aleatoria', () => {
         ghostPage.crearNuevoPage(faker.lorem.word())
         ghostPage.editarExcerpt(faker.random.alpha(), faker.random.alpha())
     })
 
-    it('E24 - Editar Excerpt con numero aleatorio', () => {
+    it('E31 - Editar Excerpt con numero aleatorio', () => {
         ghostPage.crearNuevoPage(faker.lorem.word())
         ghostPage.editarExcerpt(faker.random.number(9), faker.random.number(9))
     })
 
-    it('E25 - Editar Excerpt con numeros aleatorios', () => {
+    it('E32 - Editar Excerpt con numeros aleatorios', () => {
         ghostPage.crearNuevoPage(faker.lorem.word())
         ghostPage.editarExcerpt(faker.address.zipCode(), faker.address.zipCode())
     })
 
-    it('E26 - Editar Excerpt con una serie aleatoria de numeros', () => {
+    it('E33 - Editar Excerpt con una serie aleatoria de numeros', () => {
         ghostPage.crearNuevoPage(faker.lorem.word())
         ghostPage.editarExcerpt(faker.time.recent().toString() + faker.time.recent().toString() + faker.time.recent().toString())
     })
